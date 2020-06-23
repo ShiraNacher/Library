@@ -10,7 +10,7 @@ namespace Library.Bll
     public class ClsMemberships
     {
         private int membershipCode;
-        private int memberCode;//take from memberCode
+        private int memberID;//take from memberCode
         private DateTime beginningOfMembership;
         private DateTime endOfMembership;
         private int amountOfBooks;
@@ -20,14 +20,14 @@ namespace Library.Bll
             get { return membershipCode; }
             set { membershipCode = value; }
         }
-        public int MemberCode
+        public int MemberID
         {
-            get { return memberCode; }
+            get { return memberID; }
             set
             {
                 if (value.ToString() == "")
                     throw new Exception("לא הזנת שם מנוי");
-                memberCode = value;
+                memberID = value;
             }
         }
         public DateTime BeginningOfMembership
@@ -54,7 +54,7 @@ namespace Library.Bll
         public void FillFields()
         {
             this.membershipCode = Convert.ToInt32(drow["MembershipCode"]);
-            this.memberCode = Convert.ToInt32(drow["MemberCode"]);
+            this.memberID = Convert.ToInt32(drow["MemberID"]);
             this.beginningOfMembership = Convert.ToDateTime(drow["BeginningOfMembership"]);
             this.endOfMembership = Convert.ToDateTime(drow["EndOfMembership"]);
             this.amountOfBooks = Convert.ToInt32(drow["AmountOfBooks"]);
@@ -63,7 +63,7 @@ namespace Library.Bll
         public void FillDataRow()
         {
             drow["MembershipCode"] = this.membershipCode;
-            drow["MemberCode"] = this.memberCode;
+            drow["MemberID"] = this.memberID;
             drow["BeginningOfMembership"] = this.beginningOfMembership;
             drow["EndOfMembership"] = this.endOfMembership;
             drow["AmountOfBooks"] = this.amountOfBooks;
@@ -84,6 +84,12 @@ namespace Library.Bll
             drow = cmt.Find(id);
             FillFields();
         }
+		//public ClsMemberships(string idNumber)
+		//{
+        //    ClsMembershipsTable cmt = new ClsMembershipsTable();
+        //    drow = cmt.Find(idNumber);
+        //    FillFields();
+        //}
         public void Add()
         {
             ClsMembershipsTable ct = new ClsMembershipsTable();

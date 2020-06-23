@@ -7,9 +7,9 @@ using System.Data;
 
 namespace Library.Bll
 {
-    public class ClsBooksBeingBorrowedTable:GeneralTable
+    public class ClsBookBeingBorrowedTable:GeneralTable
     {
-        public ClsBooksBeingBorrowedTable() : base("BooksBeingBorrowed", "BooksBeingBorrowedCode")
+        public ClsBookBeingBorrowedTable() : base("BookBeingBorrowed", "BookBeingBorrowedCode")
         {
 
         }

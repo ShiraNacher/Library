@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Library.Bll
 {
-    public class ClsBorrowBookTable : GeneralTable
+    public class ClsBorrowingBooksTable : GeneralTable
     {
-        public ClsBorrowBookTable() : base("BorrowBook", "BorrowBookCode")
+        public ClsBorrowingBooksTable() : base("BorrowingBooks", "BorrowingBooksCode")
         {
 
         }
@@ -27,7 +27,7 @@ namespace Library.Bll
 
         {
             // MessageBox.Show("SELECT BorrowBook.BorrowBookCode, BorrowBook.MemberCode, BorrowBook.BorrowingDate, BorrowBook.ReturnDate, BooksBeingBorrowed.BookCode FROM BorrowBook INNER JOIN BooksBeingBorrowed ON BorrowBook.BorrowBookCode = BooksBeingBorrowed.BorrowingCode WHERE BorrowBook.MemberCode  '" + id + "'");
-            return Dal.ClsDal.GetDisplayTable("SELECT BorrowBook.BorrowBookCode, BorrowBook.MemberCode, BorrowBook.BorrowingDate, BorrowBook.ReturnDate, BooksBeingBorrowed.BookCode, Books.BookName FROM (Books INNER JOIN(BorrowBook INNER JOIN BooksBeingBorrowed  ON BorrowBook.BorrowBookCode = BooksBeingBorrowed.BorrowingCode) ON Books.BookCode = BooksBeingBorrowed.BookCode) WHERE BorrowBook.MemberCode='" + id + "'");
+            return Dal.ClsDal.GetDisplayTable("SELECT BorrowingBooks.BorrowingBooksCode, BorrowingBooks.MemberCode, BorrowingBooks.BorrowingDate, BorrowingBooks.ReturnDate, BookBeingBorrowed.BookCode, Books.BookName FROM (Books INNER JOIN(BorrowingBooks INNER JOIN BookBeingBorrowed  ON BorrowingBooks.BorrowingBooksCode = BookBeingBorrowed.BorrowingCode) ON Books.BookCode = BookBeingBorrowed.BookCode) WHERE BorrowingBooks.MemberCode='" + id + "'");
 
         }
     }

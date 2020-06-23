@@ -40,7 +40,6 @@
 			this.lblCode = new System.Windows.Forms.Label();
 			this.lblCodeLable = new System.Windows.Forms.Label();
 			this.btnDelete = new System.Windows.Forms.Button();
-			this.btnUpdateOrDeleteSave = new System.Windows.Forms.Button();
 			this.errorProviderAudience = new System.Windows.Forms.ErrorProvider(this.components);
 			this.pbxLogo = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAudience)).BeginInit();
@@ -68,7 +67,7 @@
 			// 
 			this.btnAdd.BackColor = System.Drawing.Color.White;
 			this.btnAdd.Font = new System.Drawing.Font("Arial", 10F);
-			this.btnAdd.Location = new System.Drawing.Point(302, 593);
+			this.btnAdd.Location = new System.Drawing.Point(261, 592);
 			this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(72, 41);
@@ -81,7 +80,7 @@
 			// 
 			this.btnUpdate.BackColor = System.Drawing.Color.White;
 			this.btnUpdate.Font = new System.Drawing.Font("Arial", 10F);
-			this.btnUpdate.Location = new System.Drawing.Point(214, 593);
+			this.btnUpdate.Location = new System.Drawing.Point(173, 592);
 			this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(72, 41);
@@ -160,7 +159,7 @@
 			// 
 			this.btnDelete.BackColor = System.Drawing.Color.White;
 			this.btnDelete.Font = new System.Drawing.Font("Arial", 10F);
-			this.btnDelete.Location = new System.Drawing.Point(122, 593);
+			this.btnDelete.Location = new System.Drawing.Point(81, 592);
 			this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(72, 41);
@@ -168,19 +167,6 @@
 			this.btnDelete.Text = "מחיקה";
 			this.btnDelete.UseVisualStyleBackColor = false;
 			this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-			// 
-			// btnUpdateOrDeleteSave
-			// 
-			this.btnUpdateOrDeleteSave.BackColor = System.Drawing.Color.White;
-			this.btnUpdateOrDeleteSave.Font = new System.Drawing.Font("Arial", 10F);
-			this.btnUpdateOrDeleteSave.Location = new System.Drawing.Point(37, 593);
-			this.btnUpdateOrDeleteSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.btnUpdateOrDeleteSave.Name = "btnUpdateOrDeleteSave";
-			this.btnUpdateOrDeleteSave.Size = new System.Drawing.Size(72, 41);
-			this.btnUpdateOrDeleteSave.TabIndex = 6;
-			this.btnUpdateOrDeleteSave.Text = "אישור";
-			this.btnUpdateOrDeleteSave.UseVisualStyleBackColor = false;
-			this.btnUpdateOrDeleteSave.Visible = false;
 			// 
 			// errorProviderAudience
 			// 
@@ -208,7 +194,6 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(413, 795);
 			this.Controls.Add(this.pbxLogo);
-			this.Controls.Add(this.btnUpdateOrDeleteSave);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.pnlAddOrUpdate);
 			this.Controls.Add(this.btnUpdate);
@@ -238,7 +223,6 @@
         private System.Windows.Forms.TextBox txtAudienceName;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAddSave;
-        private System.Windows.Forms.Button btnUpdateOrDeleteSave;
         private System.Windows.Forms.ErrorProvider errorProviderAudience;
 		private System.Windows.Forms.PictureBox pbxLogo;
 	}

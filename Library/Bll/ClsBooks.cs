@@ -11,8 +11,8 @@ namespace Library.Bll
     {
         private int bookCode;
         private string bookName;
-        private int bookTypeCode;
-        //private string availability;
+        private string bookType;
+        private bool availability;
         private int authorCode;
         private string description;
         //private int numberOfPages;
@@ -41,17 +41,17 @@ namespace Library.Bll
                 bookName = value;
             }
         }
-        public int BookTypeCode
+        public string BookType
         {
-            get { return bookTypeCode; }
-            set { bookTypeCode = value; }
+            get { return bookType; }
+            set { bookType = value; }
         }
-        //public string Availability
-        //{
-        //    get { return availability; }
-        //    set { availability = value; }
-        //}
-        public int AuthorCode
+		public bool Availability
+		{
+			get { return availability; }
+			set { availability = value; }
+		}
+		public int AuthorCode
         {
             get { return authorCode; }
             set
@@ -151,8 +151,8 @@ namespace Library.Bll
         {
             this.bookCode = Convert.ToInt32(drow["BookCode"]);
             this.bookName = drow["BookName"].ToString();
-            this.bookTypeCode = Convert.ToInt32(drow["BookTypeCode"]);//?
-            //this.availability = drow["Availability"].ToString();
+            this.bookType = drow["BookType"].ToString();//?
+            this.availability = Convert.ToBoolean(drow["Availability"]);
             this.authorCode = Convert.ToInt32(drow["AuthorCode"]);
             this.description = drow["Description"].ToString();
             //this.numberOfPages = Convert.ToInt32(drow["NumberOfPages"]);
@@ -170,8 +170,8 @@ namespace Library.Bll
         {
             drow["BookCode"] = this.bookCode;
             drow["BookName"] = this.bookName;
-            drow["BookTypeCode"] = this.bookTypeCode;
-            //drow["Availability"] = this.availability;
+            drow["BookType"] = this.bookType;
+            drow["Availability"] = this.availability;
             drow["AuthorCode"] = this.authorCode;
             drow["Description"] = this.description;
             //drow["NumberOfPages"] = this.numberOfPages;

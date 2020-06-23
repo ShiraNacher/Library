@@ -7,16 +7,16 @@ using System.Data;
 
 namespace Library.Bll
 {
-    public class ClsBooksBeingBorrowed
+    public class ClsBookBeingBorrowed
     {
-        private int booksBeingBorrowedCode;
+        private int bookBeingBorrowedCode;
         private int borrowingCode;
         private int bookCode;
         private string status;
-        public int BooksBeingBorrowedCode
+        public int BookBeingBorrowedCode
         {
-            get { return booksBeingBorrowedCode; }
-            set { booksBeingBorrowedCode = value; }
+            get { return bookBeingBorrowedCode; }
+            set { bookBeingBorrowedCode = value; }
         }
         public int BorrowingCode
         {
@@ -36,36 +36,36 @@ namespace Library.Bll
         private DataRow drow;
         public void FillFields()
         {
-            this.booksBeingBorrowedCode = Convert.ToInt32(drow["BooksBeingBorrowedCode"]);
+            this.bookBeingBorrowedCode = Convert.ToInt32(drow["BookBeingBorrowedCode"]);
             this.borrowingCode = Convert.ToInt32(drow["BorrowingCode"]);
             this.bookCode = Convert.ToInt32(drow["BookCode"]);
             this.status = drow["Status"].ToString();
         }
         public void FillDataRow()
         {
-            drow["BooksBeingBorrowedCode"] = this.booksBeingBorrowedCode;
+            drow["BookBeingBorrowedCode"] = this.bookBeingBorrowedCode;
             drow["BorrowingCode"] = this.borrowingCode;
             drow["BookCode"] = this.bookCode;
             drow["Status"] = this.status;
         }
-        public ClsBooksBeingBorrowed()
+        public ClsBookBeingBorrowed()
         {
 
         }
-        public ClsBooksBeingBorrowed(DataRow dr)
+        public ClsBookBeingBorrowed(DataRow dr)
         {
             drow = dr;
             FillFields();
         }
-        public ClsBooksBeingBorrowed(int id)
+        public ClsBookBeingBorrowed(int id)
         {
-            ClsBooksBeingBorrowedTable cat = new ClsBooksBeingBorrowedTable();
+            ClsBookBeingBorrowedTable cat = new ClsBookBeingBorrowedTable();
             drow = cat.Find(id);
             FillFields();
         }
         public void Add()
         {
-            ClsBooksBeingBorrowedTable ct = new ClsBooksBeingBorrowedTable();
+            ClsBookBeingBorrowedTable ct = new ClsBookBeingBorrowedTable();
             drow = ct.GetNewRow();
             FillDataRow();
             ct.AddRow(drow);
@@ -73,13 +73,13 @@ namespace Library.Bll
         public void Update()
         {
             FillDataRow();
-            Bll.ClsBooksBeingBorrowedTable c = new ClsBooksBeingBorrowedTable();
+            Bll.ClsBookBeingBorrowedTable c = new ClsBookBeingBorrowedTable();
             c.Save();
         }
         public void Delete()
         {
             drow.Delete();
-            ClsBooksBeingBorrowedTable c = new ClsBooksBeingBorrowedTable();
+            ClsBookBeingBorrowedTable c = new ClsBookBeingBorrowedTable();
             c.Save();
         }
     }

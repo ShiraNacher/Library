@@ -61,28 +61,28 @@ namespace Library.Bll
         }
         public ClsAuthors(int id)
         {
-            ClsAudienceTable cat = new ClsAudienceTable();
+            ClsAuthorsTable cat = new ClsAuthorsTable();
             drow = cat.Find(id);
             FillFields();
         }
         public void Add()
         {
-            ClsAudienceTable ct = new ClsAudienceTable();
-            drow = ct.GetNewRow();
+            ClsAuthorsTable cat = new ClsAuthorsTable();
+            drow = cat.GetNewRow();
             FillDataRow();
-            ct.AddRow(drow);
+            cat.AddRow(drow);
         }
         public void Update()
         {
             FillDataRow();
-            Bll.ClsAudienceTable c = new ClsAudienceTable();
-            c.Save();
+            Bll.ClsAuthorsTable cat = new ClsAuthorsTable();
+            cat.Save();
         }
         public void Delete()
         {
             drow.Delete();
-            ClsAudienceTable c = new ClsAudienceTable();
-            c.Save();
+            ClsAudienceTable cat = new ClsAudienceTable();
+            cat.Save();
         }
     }
 }

@@ -11,9 +11,10 @@ namespace Library.Bll
     {
         private int bookNameCode;
         private int bookCode;
-        private string availability;
+        //private bool availability;
         private int numberOfPages;
         private string publisher;
+        private DateTime datePublished;
         private DateTime dateComputerized;
         public int BookNameCode
         {
@@ -25,16 +26,11 @@ namespace Library.Bll
             get { return bookCode; }
             set { bookCode = value; }
         }
-        public string Availability
-        {
-            get { return availability; }
-            set
-            {
-                if(value == "")
-                    throw new Exception("לא הזנת סוג זמינות");
-                availability = value;
-            }
-        }
+        //public bool Availability
+        //{
+        //    get { return availability; }
+        //    set { availability = value; }
+        //}
         public int NumberOfPages
         {
             get { return numberOfPages; }
@@ -50,6 +46,11 @@ namespace Library.Bll
             get { return publisher; }
             set { publisher = value; }
         }
+        public DateTime DatePublished
+        {
+            get { return datePublished; }
+            set { datePublished = value; }
+        }
         public DateTime DateComputerized
         {
             get { return dateComputerized; }
@@ -60,18 +61,20 @@ namespace Library.Bll
         {
             this.bookNameCode = Convert.ToInt32(drow["BookNameCode"]);
             this.bookCode = Convert.ToInt32(drow["BookCode"]);
-            this.availability = drow["Availability"].ToString();
+            //this.availability = Convert.ToBolean(drow["Availability"]);
             this.numberOfPages = Convert.ToInt32(drow["NumberOfPages"]);
             this.publisher = drow["Publisher"].ToString();
+            this.datePublished = Convert.ToDateTime(drow["DatePublished"]);
             this.dateComputerized = Convert.ToDateTime(drow["DateComputerized"]);
         }
         public void FillDataRow()
         {
             drow["BookNameCode"] = this.bookNameCode;
             drow["BookCode"] = this.bookCode;
-            drow["Availability"] = this.availability;
+            //drow["Availability"] = this.availability;
             drow["NumberOfPages"] = this.numberOfPages;
             drow["Publisher"] = this.publisher;
+            drow["DatePublished"] = this.datePublished;
             drow["DateComputerized"] = this.dateComputerized;
         }
         public ClsBookNames()

@@ -19,10 +19,22 @@ namespace Library.Gui
         {
             InitializeComponent();
             state = "add";
-            this.Text = "הוספת מנוי";
+                lblState.Text = "הוספת מנוי";
             mt = new Bll.ClsMembersTable();
             m = new Bll.ClsMembers();
         }
+        public FrmMemberChange(Bll.ClsMembers member, string s)
+		{
+            InitializeComponent();
+            state = s;
+            m = member;
+            if (s == "update")
+                lblState.Text = "עדכון פרטי מנוי";
+            else
+                lblState.Text = "חידוש מנוי - וודא שכל הפרטים נכונים";
+            FillFormField();
+        }
+
         public void FillFormField()
         {
            // lblMemberCode.Text = m.MemberCode.ToString();
@@ -34,19 +46,44 @@ namespace Library.Gui
             txtStreet.Text = m.Street.ToString();
             txtAppartmentNumber.Text = m.AppartmentNumber.ToString();
             dtmDateOfBirth.Text = m.DateOfBirth.ToString();
+            txtAmountOfBooks.Text = m.AmountOfBooks.ToString();
 
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
             if (Check ())
             {
+                m.LastAndFirstName = txtLastName.Text + " " + txtFirstName.Text;
                 if (state == "add")
 
                 {
                     try
                     {
+                        m.FirstRegistration = DateTime.Today;
+                        m.BeginningOfMembership = DateTime.Today;
+                        m.EndOfMembership = m.BeginningOfMembership.AddYears(1);
+                        if(m.AmountOfBooks == 1)
+                            m.Price = 50;
+                        else
+                        {
+                            if (m.AmountOfBooks == 2)
+                                m.Price = 65;
+                            else
+                            {
+                                if (m.AmountOfBooks == 5)
+                                    m.Price = 85;
+                                else
+                                {
+                                    if (m.AmountOfBooks == 7)
+                                        m.Price = 100;
+                                    else
+                                        m.Price = 130;
+                                }
+                            }
+                        }
                         m.Add();
                         MessageBox.Show("!ההוספה בוצעה בהצלחה");
+                        MessageBox.Show("המחיר למנוי הוא:" + m.Price);
                     }
                     catch (Exception)
                     {
@@ -61,7 +98,7 @@ namespace Library.Gui
                     try
                     {
                         m.Update();
-                        MessageBox.Show("!!");
+                        MessageBox.Show("העדכון בוצע בהצלחה");
                     }
                     catch (Exception)
                     {
@@ -69,6 +106,42 @@ namespace Library.Gui
                         MessageBox.Show("error");
                     }
 
+                }
+                if (state == "renew")
+
+                {
+                    try
+                    {
+                        m.BeginningOfMembership = DateTime.Today;
+                        m.EndOfMembership = m.BeginningOfMembership.AddYears(1);
+                        if (m.AmountOfBooks == 1)
+                            m.Price = 50;
+                        else
+                        {
+                            if (m.AmountOfBooks == 2)
+                                m.Price = 65;
+                            else
+                            {
+                                if (m.AmountOfBooks == 5)
+                                    m.Price = 85;
+                                else
+                                {
+                                    if (m.AmountOfBooks == 7)
+                                        m.Price = 100;
+                                    else
+                                        m.Price = 130;
+                                }
+                            }
+                        }
+                        m.Update();
+                        //MessageBox.Show(m.BeginningOfMembership + " " + m.EndOfMembership);
+                        MessageBox.Show("החידוש בוצע בהצלחה");
+                        MessageBox.Show("המחיר למנוי הוא:" + m.Price);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("error");
+                    }
                 }
 
             }
@@ -154,6 +227,16 @@ namespace Library.Gui
             {
 
                 errorProviderMemberChange.SetError(dtmDateOfBirth, ex.Message);
+                ok = false;
+            }
+            try
+            {
+                m.AmountOfBooks = Convert.ToInt32(txtAmountOfBooks.Text);
+            }
+            catch (Exception ex)
+            {
+
+                errorProviderMemberChange.SetError(txtAmountOfBooks, ex.Message);
                 ok = false;
             }
             return ok;

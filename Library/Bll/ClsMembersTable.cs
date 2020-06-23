@@ -17,5 +17,9 @@ namespace Library.Bll
         {
             return Dal.ClsDal.GetDisplayTable("SELECT Members.IDNumber, [LastName] & '  ' &[Members]![FirstName] AS FullName, Members.PhoneNumber, Members.City, Members.Street, Members.AppartmentNumber, Members.DateOfBirth FROM Members");
         }
-    }
+		public DataTable GetFullNamexxx()
+		{
+			return Dal.ClsDal.GetDisplayTable("SELECT Members.IDNumber, Members.LastAndFirstName, Members.PhoneNumber, Members.City, Members.Street, Members.AppartmentNumber, Members.DateOfBirth FROM Members");
+		}
+	}
 }

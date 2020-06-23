@@ -71,10 +71,6 @@ namespace Library.Gui
                     MessageBox.Show("לא ניתן למחוק סופר זה");
                 }
             }
-            else
-            {
-                this.Close();
-            }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -93,7 +89,7 @@ namespace Library.Gui
                     catch (Exception)
                     {
 
-                        MessageBox.Show("לא מילית את כל הנתונים");
+                        MessageBox.Show("!לא ניתן לבצע הוספה");
                     }
 
                 }
@@ -103,13 +99,13 @@ namespace Library.Gui
                     try
                     {
                         a.Update();
-                        MessageBox.Show("!ההוספה בוצעה בהצלחה");
+                        MessageBox.Show("!העדכון בוצע בהצלחה");
                         pnlAddOrUpdate.Visible = false;
                     }
                     catch (Exception)
                     {
 
-                        MessageBox.Show("!לא מילית את כל הנתונים");
+                        MessageBox.Show("!לא ניתן לבצע עדכון");
                     }
 
                 }

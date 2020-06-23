@@ -45,13 +45,7 @@
 			this.txtReaderPhoneNumber = new System.Windows.Forms.TextBox();
 			this.txtReaderID = new System.Windows.Forms.TextBox();
 			this.txtReaderName = new System.Windows.Forms.TextBox();
-			this.lsvBorrowing = new System.Windows.Forms.ListView();
-			this.bookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.authorName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.borrowDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.numberOfBorrowDays = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.returnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.bookCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.listVeiwBorrowing = new System.Windows.Forms.ListView();
 			this.lblComments = new System.Windows.Forms.Label();
 			this.txtComments = new System.Windows.Forms.TextBox();
 			this.btnAddBook = new System.Windows.Forms.Button();
@@ -63,6 +57,7 @@
 			this.pbxLogo = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnSaveChanges = new System.Windows.Forms.Button();
 			this.gbxSearch.SuspendLayout();
 			this.gbxInfo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.errorProviderBooks)).BeginInit();
@@ -240,70 +235,23 @@
 			this.txtReaderName.Size = new System.Drawing.Size(113, 27);
 			this.txtReaderName.TabIndex = 3;
 			// 
-			// lsvBorrowing
+			// listVeiwBorrowing
 			// 
-			this.lsvBorrowing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lsvBorrowing.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.bookName,
-            this.authorName,
-            this.borrowDate,
-            this.numberOfBorrowDays,
-            this.returnDate,
-            this.bookCode});
-			this.lsvBorrowing.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lsvBorrowing.FullRowSelect = true;
-			this.lsvBorrowing.GridLines = true;
-			this.lsvBorrowing.HideSelection = false;
-			this.lsvBorrowing.Location = new System.Drawing.Point(191, 297);
-			this.lsvBorrowing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.lsvBorrowing.MultiSelect = false;
-			this.lsvBorrowing.Name = "lsvBorrowing";
-			this.lsvBorrowing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.lsvBorrowing.RightToLeftLayout = true;
-			this.lsvBorrowing.Size = new System.Drawing.Size(731, 189);
-			this.lsvBorrowing.TabIndex = 2;
-			this.lsvBorrowing.UseCompatibleStateImageBehavior = false;
-			this.lsvBorrowing.View = System.Windows.Forms.View.Details;
-			// 
-			// bookName
-			// 
-			this.bookName.DisplayIndex = 1;
-			this.bookName.Text = "שם ספר";
-			this.bookName.Width = 196;
-			// 
-			// authorName
-			// 
-			this.authorName.DisplayIndex = 2;
-			this.authorName.Text = "שם סופר";
-			this.authorName.Width = 145;
-			// 
-			// borrowDate
-			// 
-			this.borrowDate.DisplayIndex = 3;
-			this.borrowDate.Text = "תאריך השאלה";
-			this.borrowDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.borrowDate.Width = 125;
-			// 
-			// numberOfBorrowDays
-			// 
-			this.numberOfBorrowDays.DisplayIndex = 4;
-			this.numberOfBorrowDays.Text = "ימי השאלה";
-			this.numberOfBorrowDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.numberOfBorrowDays.Width = 80;
-			// 
-			// returnDate
-			// 
-			this.returnDate.DisplayIndex = 5;
-			this.returnDate.Text = "תאריך החזרה";
-			this.returnDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.returnDate.Width = 150;
-			// 
-			// bookCode
-			// 
-			this.bookCode.DisplayIndex = 0;
-			this.bookCode.Text = "קוד הספר";
-			this.bookCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.bookCode.Width = 109;
+			this.listVeiwBorrowing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.listVeiwBorrowing.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.listVeiwBorrowing.FullRowSelect = true;
+			this.listVeiwBorrowing.GridLines = true;
+			this.listVeiwBorrowing.HideSelection = false;
+			this.listVeiwBorrowing.Location = new System.Drawing.Point(120, 296);
+			this.listVeiwBorrowing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.listVeiwBorrowing.MultiSelect = false;
+			this.listVeiwBorrowing.Name = "listVeiwBorrowing";
+			this.listVeiwBorrowing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.listVeiwBorrowing.RightToLeftLayout = true;
+			this.listVeiwBorrowing.Size = new System.Drawing.Size(855, 189);
+			this.listVeiwBorrowing.TabIndex = 2;
+			this.listVeiwBorrowing.UseCompatibleStateImageBehavior = false;
+			this.listVeiwBorrowing.View = System.Windows.Forms.View.Details;
 			// 
 			// lblComments
 			// 
@@ -331,7 +279,7 @@
 			// 
 			this.btnAddBook.BackColor = System.Drawing.Color.White;
 			this.btnAddBook.Font = new System.Drawing.Font("Arial", 12F);
-			this.btnAddBook.Location = new System.Drawing.Point(17, 42);
+			this.btnAddBook.Location = new System.Drawing.Point(16, 53);
 			this.btnAddBook.Margin = new System.Windows.Forms.Padding(4);
 			this.btnAddBook.Name = "btnAddBook";
 			this.btnAddBook.Size = new System.Drawing.Size(100, 44);
@@ -343,7 +291,7 @@
 			// txtNewBookCode
 			// 
 			this.txtNewBookCode.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.txtNewBookCode.Location = new System.Drawing.Point(129, 53);
+			this.txtNewBookCode.Location = new System.Drawing.Point(128, 64);
 			this.txtNewBookCode.Margin = new System.Windows.Forms.Padding(4);
 			this.txtNewBookCode.Name = "txtNewBookCode";
 			this.txtNewBookCode.Size = new System.Drawing.Size(169, 27);
@@ -354,7 +302,7 @@
 			this.lblBorrowBook.AutoSize = true;
 			this.lblBorrowBook.BackColor = System.Drawing.Color.Transparent;
 			this.lblBorrowBook.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblBorrowBook.Location = new System.Drawing.Point(204, 18);
+			this.lblBorrowBook.Location = new System.Drawing.Point(203, 29);
 			this.lblBorrowBook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBorrowBook.Name = "lblBorrowBook";
 			this.lblBorrowBook.Size = new System.Drawing.Size(98, 19);
@@ -374,7 +322,7 @@
             "",
             "",
             ""});
-			this.chbReturn.Location = new System.Drawing.Point(945, 350);
+			this.chbReturn.Location = new System.Drawing.Point(994, 349);
 			this.chbReturn.Name = "chbReturn";
 			this.chbReturn.Size = new System.Drawing.Size(24, 136);
 			this.chbReturn.TabIndex = 8;
@@ -384,7 +332,7 @@
 			this.lblReturn.AutoSize = true;
 			this.lblReturn.BackColor = System.Drawing.Color.Transparent;
 			this.lblReturn.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblReturn.Location = new System.Drawing.Point(942, 317);
+			this.lblReturn.Location = new System.Drawing.Point(991, 316);
 			this.lblReturn.Name = "lblReturn";
 			this.lblReturn.Size = new System.Drawing.Size(55, 19);
 			this.lblReturn.TabIndex = 9;
@@ -411,7 +359,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.label1.Location = new System.Drawing.Point(306, 57);
+			this.label1.Location = new System.Drawing.Point(305, 68);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(68, 19);
@@ -431,20 +379,33 @@
 			this.panel1.Size = new System.Drawing.Size(388, 127);
 			this.panel1.TabIndex = 12;
 			// 
+			// btnSaveChanges
+			// 
+			this.btnSaveChanges.BackColor = System.Drawing.Color.White;
+			this.btnSaveChanges.Font = new System.Drawing.Font("Arial", 12F);
+			this.btnSaveChanges.Location = new System.Drawing.Point(241, 536);
+			this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(4);
+			this.btnSaveChanges.Name = "btnSaveChanges";
+			this.btnSaveChanges.Size = new System.Drawing.Size(100, 44);
+			this.btnSaveChanges.TabIndex = 12;
+			this.btnSaveChanges.Text = "אישור";
+			this.btnSaveChanges.UseVisualStyleBackColor = false;
+			// 
 			// FrmBorrowingBooks
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Library.Properties.Resources.gradiant___white_blue_purple_4;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1096, 657);
+			this.ClientSize = new System.Drawing.Size(1134, 657);
+			this.Controls.Add(this.btnSaveChanges);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.pbxLogo);
 			this.Controls.Add(this.lblReturn);
 			this.Controls.Add(this.chbReturn);
 			this.Controls.Add(this.txtComments);
 			this.Controls.Add(this.lblComments);
-			this.Controls.Add(this.lsvBorrowing);
+			this.Controls.Add(this.listVeiwBorrowing);
 			this.Controls.Add(this.gbxInfo);
 			this.Controls.Add(this.gbxSearch);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -478,13 +439,7 @@
         private System.Windows.Forms.Label lblReaderPhoneNumber;
         private System.Windows.Forms.Label lblReaderID;
         private System.Windows.Forms.Label lblReaderName;
-        private System.Windows.Forms.ListView lsvBorrowing;
-        private System.Windows.Forms.ColumnHeader bookCode;
-        private System.Windows.Forms.ColumnHeader bookName;
-        private System.Windows.Forms.ColumnHeader borrowDate;
-        private System.Windows.Forms.ColumnHeader numberOfBorrowDays;
-        private System.Windows.Forms.ColumnHeader returnDate;
-        private System.Windows.Forms.ColumnHeader authorName;
+        private System.Windows.Forms.ListView listVeiwBorrowing;
         private System.Windows.Forms.Label lblAmountOfBooks;
         private System.Windows.Forms.TextBox txtAmountOfBooks;
         private System.Windows.Forms.Label lblComments;
@@ -498,5 +453,6 @@
 		private System.Windows.Forms.PictureBox pbxLogo;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnSaveChanges;
 	}
 }

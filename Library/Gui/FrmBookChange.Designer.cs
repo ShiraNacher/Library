@@ -59,6 +59,14 @@
 			this.txtNumberInSeries = new System.Windows.Forms.NumericUpDown();
 			this.chkHasSeries = new System.Windows.Forms.CheckBox();
 			this.pbxLogo = new System.Windows.Forms.PictureBox();
+			this.txtNumberOfPages = new System.Windows.Forms.TextBox();
+			this.lblNumberOfPages = new System.Windows.Forms.Label();
+			this.txtPublisher = new System.Windows.Forms.TextBox();
+			this.lblPublisher = new System.Windows.Forms.Label();
+			this.txtDateComputerized = new System.Windows.Forms.TextBox();
+			this.lblDateComputerized = new System.Windows.Forms.Label();
+			this.txtDatePublished = new System.Windows.Forms.TextBox();
+			this.lblDatePublished = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.errorProviderBookChange)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtNumberInSeries)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
@@ -69,7 +77,7 @@
 			this.lblCodeLable.AutoSize = true;
 			this.lblCodeLable.BackColor = System.Drawing.Color.Transparent;
 			this.lblCodeLable.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblCodeLable.Location = new System.Drawing.Point(497, 138);
+			this.lblCodeLable.Location = new System.Drawing.Point(513, 138);
 			this.lblCodeLable.Name = "lblCodeLable";
 			this.lblCodeLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblCodeLable.Size = new System.Drawing.Size(63, 19);
@@ -79,8 +87,9 @@
 			// lblCode
 			// 
 			this.lblCode.AutoSize = true;
+			this.lblCode.BackColor = System.Drawing.Color.Transparent;
 			this.lblCode.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblCode.Location = new System.Drawing.Point(369, 138);
+			this.lblCode.Location = new System.Drawing.Point(359, 138);
 			this.lblCode.Name = "lblCode";
 			this.lblCode.Size = new System.Drawing.Size(51, 19);
 			this.lblCode.TabIndex = 1;
@@ -91,7 +100,7 @@
 			this.lblBookName.AutoSize = true;
 			this.lblBookName.BackColor = System.Drawing.Color.Transparent;
 			this.lblBookName.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblBookName.Location = new System.Drawing.Point(497, 176);
+			this.lblBookName.Location = new System.Drawing.Point(513, 176);
 			this.lblBookName.Name = "lblBookName";
 			this.lblBookName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblBookName.Size = new System.Drawing.Size(64, 19);
@@ -101,7 +110,7 @@
 			// txtBookName
 			// 
 			this.txtBookName.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.txtBookName.Location = new System.Drawing.Point(337, 173);
+			this.txtBookName.Location = new System.Drawing.Point(327, 173);
 			this.txtBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtBookName.Name = "txtBookName";
 			this.txtBookName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -111,7 +120,7 @@
 			// txtAuthorName
 			// 
 			this.txtAuthorName.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.txtAuthorName.Location = new System.Drawing.Point(337, 214);
+			this.txtAuthorName.Location = new System.Drawing.Point(327, 214);
 			this.txtAuthorName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtAuthorName.Name = "txtAuthorName";
 			this.txtAuthorName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -123,7 +132,7 @@
 			this.lblAuthorName.AutoSize = true;
 			this.lblAuthorName.BackColor = System.Drawing.Color.Transparent;
 			this.lblAuthorName.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblAuthorName.Location = new System.Drawing.Point(497, 218);
+			this.lblAuthorName.Location = new System.Drawing.Point(513, 218);
 			this.lblAuthorName.Name = "lblAuthorName";
 			this.lblAuthorName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblAuthorName.Size = new System.Drawing.Size(67, 19);
@@ -133,7 +142,7 @@
 			// txtBookType
 			// 
 			this.txtBookType.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.txtBookType.Location = new System.Drawing.Point(337, 255);
+			this.txtBookType.Location = new System.Drawing.Point(327, 255);
 			this.txtBookType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtBookType.Name = "txtBookType";
 			this.txtBookType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -145,7 +154,7 @@
 			this.lblBookType.AutoSize = true;
 			this.lblBookType.BackColor = System.Drawing.Color.Transparent;
 			this.lblBookType.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblBookType.Location = new System.Drawing.Point(502, 256);
+			this.lblBookType.Location = new System.Drawing.Point(518, 256);
 			this.lblBookType.Name = "lblBookType";
 			this.lblBookType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblBookType.Size = new System.Drawing.Size(62, 19);
@@ -157,7 +166,7 @@
 			this.lblAudience.AutoSize = true;
 			this.lblAudience.BackColor = System.Drawing.Color.Transparent;
 			this.lblAudience.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblAudience.Location = new System.Drawing.Point(499, 297);
+			this.lblAudience.Location = new System.Drawing.Point(515, 297);
 			this.lblAudience.Name = "lblAudience";
 			this.lblAudience.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblAudience.Size = new System.Drawing.Size(62, 19);
@@ -167,7 +176,7 @@
 			// txtDescription
 			// 
 			this.txtDescription.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.txtDescription.Location = new System.Drawing.Point(337, 337);
+			this.txtDescription.Location = new System.Drawing.Point(327, 337);
 			this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtDescription.Name = "txtDescription";
 			this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -179,7 +188,7 @@
 			this.lblDescription.AutoSize = true;
 			this.lblDescription.BackColor = System.Drawing.Color.Transparent;
 			this.lblDescription.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblDescription.Location = new System.Drawing.Point(516, 340);
+			this.lblDescription.Location = new System.Drawing.Point(532, 340);
 			this.lblDescription.Name = "lblDescription";
 			this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblDescription.Size = new System.Drawing.Size(45, 19);
@@ -191,7 +200,7 @@
 			this.lblLanguage.AutoSize = true;
 			this.lblLanguage.BackColor = System.Drawing.Color.Transparent;
 			this.lblLanguage.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblLanguage.Location = new System.Drawing.Point(521, 382);
+			this.lblLanguage.Location = new System.Drawing.Point(537, 382);
 			this.lblLanguage.Name = "lblLanguage";
 			this.lblLanguage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblLanguage.Size = new System.Drawing.Size(40, 19);
@@ -203,7 +212,7 @@
 			this.lblOriginalLanguage.AutoSize = true;
 			this.lblOriginalLanguage.BackColor = System.Drawing.Color.Transparent;
 			this.lblOriginalLanguage.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.lblOriginalLanguage.Location = new System.Drawing.Point(487, 424);
+			this.lblOriginalLanguage.Location = new System.Drawing.Point(503, 427);
 			this.lblOriginalLanguage.Name = "lblOriginalLanguage";
 			this.lblOriginalLanguage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.lblOriginalLanguage.Size = new System.Drawing.Size(77, 19);
@@ -265,6 +274,7 @@
 			this.lblNumberInSeries.Size = new System.Drawing.Size(99, 19);
 			this.lblNumberInSeries.TabIndex = 24;
 			this.lblNumberInSeries.Text = "מספר בסדרה";
+			this.lblNumberInSeries.Visible = false;
 			// 
 			// txtStatus
 			// 
@@ -304,7 +314,7 @@
 			// 
 			this.txtAudience.Font = new System.Drawing.Font("Arial", 10.2F);
 			this.txtAudience.FormattingEnabled = true;
-			this.txtAudience.Location = new System.Drawing.Point(337, 294);
+			this.txtAudience.Location = new System.Drawing.Point(327, 294);
 			this.txtAudience.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtAudience.Name = "txtAudience";
 			this.txtAudience.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -318,7 +328,7 @@
 			this.txtLanguage.Items.AddRange(new object[] {
             "אנגלית",
             "עברית"});
-			this.txtLanguage.Location = new System.Drawing.Point(337, 381);
+			this.txtLanguage.Location = new System.Drawing.Point(327, 381);
 			this.txtLanguage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtLanguage.Name = "txtLanguage";
 			this.txtLanguage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -332,7 +342,7 @@
 			this.txtOriginalLanguage.Items.AddRange(new object[] {
             "אנגלית",
             "עברית"});
-			this.txtOriginalLanguage.Location = new System.Drawing.Point(337, 424);
+			this.txtOriginalLanguage.Location = new System.Drawing.Point(327, 424);
 			this.txtOriginalLanguage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtOriginalLanguage.Name = "txtOriginalLanguage";
 			this.txtOriginalLanguage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -359,11 +369,12 @@
 			// txtNumberInSeries
 			// 
 			this.txtNumberInSeries.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.txtNumberInSeries.Location = new System.Drawing.Point(106, 307);
+			this.txtNumberInSeries.Location = new System.Drawing.Point(99, 307);
 			this.txtNumberInSeries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtNumberInSeries.Name = "txtNumberInSeries";
-			this.txtNumberInSeries.Size = new System.Drawing.Size(45, 27);
+			this.txtNumberInSeries.Size = new System.Drawing.Size(52, 27);
 			this.txtNumberInSeries.TabIndex = 41;
+			this.txtNumberInSeries.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.txtNumberInSeries.Visible = false;
 			// 
 			// chkHasSeries
@@ -376,6 +387,7 @@
 			this.chkHasSeries.Size = new System.Drawing.Size(18, 17);
 			this.chkHasSeries.TabIndex = 42;
 			this.chkHasSeries.UseVisualStyleBackColor = true;
+			this.chkHasSeries.CheckedChanged += new System.EventHandler(this.chkHasSeries_CheckedChanged);
 			// 
 			// pbxLogo
 			// 
@@ -389,13 +401,111 @@
 			this.pbxLogo.TabIndex = 43;
 			this.pbxLogo.TabStop = false;
 			// 
+			// txtNumberOfPages
+			// 
+			this.txtNumberOfPages.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.txtNumberOfPages.Location = new System.Drawing.Point(327, 465);
+			this.txtNumberOfPages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtNumberOfPages.Name = "txtNumberOfPages";
+			this.txtNumberOfPages.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.txtNumberOfPages.Size = new System.Drawing.Size(116, 27);
+			this.txtNumberOfPages.TabIndex = 45;
+			// 
+			// lblNumberOfPages
+			// 
+			this.lblNumberOfPages.AutoSize = true;
+			this.lblNumberOfPages.BackColor = System.Drawing.Color.Transparent;
+			this.lblNumberOfPages.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.lblNumberOfPages.Location = new System.Drawing.Point(484, 468);
+			this.lblNumberOfPages.Name = "lblNumberOfPages";
+			this.lblNumberOfPages.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.lblNumberOfPages.Size = new System.Drawing.Size(96, 19);
+			this.lblNumberOfPages.TabIndex = 44;
+			this.lblNumberOfPages.Text = "מספר עמודים";
+			// 
+			// txtPublisher
+			// 
+			this.txtPublisher.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.txtPublisher.Location = new System.Drawing.Point(327, 508);
+			this.txtPublisher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtPublisher.Name = "txtPublisher";
+			this.txtPublisher.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.txtPublisher.Size = new System.Drawing.Size(116, 27);
+			this.txtPublisher.TabIndex = 47;
+			// 
+			// lblPublisher
+			// 
+			this.lblPublisher.AutoSize = true;
+			this.lblPublisher.BackColor = System.Drawing.Color.Transparent;
+			this.lblPublisher.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.lblPublisher.Location = new System.Drawing.Point(502, 508);
+			this.lblPublisher.Name = "lblPublisher";
+			this.lblPublisher.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.lblPublisher.Size = new System.Drawing.Size(78, 19);
+			this.lblPublisher.TabIndex = 46;
+			this.lblPublisher.Text = "מוציא לאור";
+			// 
+			// txtDateComputerized
+			// 
+			this.txtDateComputerized.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.txtDateComputerized.Location = new System.Drawing.Point(327, 593);
+			this.txtDateComputerized.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtDateComputerized.Name = "txtDateComputerized";
+			this.txtDateComputerized.ReadOnly = true;
+			this.txtDateComputerized.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.txtDateComputerized.Size = new System.Drawing.Size(116, 27);
+			this.txtDateComputerized.TabIndex = 49;
+			// 
+			// lblDateComputerized
+			// 
+			this.lblDateComputerized.AutoSize = true;
+			this.lblDateComputerized.BackColor = System.Drawing.Color.Transparent;
+			this.lblDateComputerized.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.lblDateComputerized.Location = new System.Drawing.Point(487, 596);
+			this.lblDateComputerized.Name = "lblDateComputerized";
+			this.lblDateComputerized.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.lblDateComputerized.Size = new System.Drawing.Size(93, 19);
+			this.lblDateComputerized.TabIndex = 48;
+			this.lblDateComputerized.Text = "תאריך קטלוג";
+			// 
+			// txtDatePublished
+			// 
+			this.txtDatePublished.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.txtDatePublished.Location = new System.Drawing.Point(327, 551);
+			this.txtDatePublished.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtDatePublished.Name = "txtDatePublished";
+			this.txtDatePublished.ReadOnly = true;
+			this.txtDatePublished.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.txtDatePublished.Size = new System.Drawing.Size(116, 27);
+			this.txtDatePublished.TabIndex = 51;
+			// 
+			// lblDatePublished
+			// 
+			this.lblDatePublished.AutoSize = true;
+			this.lblDatePublished.BackColor = System.Drawing.Color.Transparent;
+			this.lblDatePublished.Font = new System.Drawing.Font("Arial", 10.2F);
+			this.lblDatePublished.Location = new System.Drawing.Point(449, 554);
+			this.lblDatePublished.Name = "lblDatePublished";
+			this.lblDatePublished.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.lblDatePublished.Size = new System.Drawing.Size(132, 19);
+			this.lblDatePublished.TabIndex = 50;
+			this.lblDatePublished.Text = "תאריך הוצאה לאור";
+			// 
 			// FrmBookChange
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Library.Properties.Resources.gradiant___white_blue_purple_4;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(585, 485);
+			this.ClientSize = new System.Drawing.Size(609, 639);
+			this.Controls.Add(this.txtDatePublished);
+			this.Controls.Add(this.lblDatePublished);
+			this.Controls.Add(this.txtDateComputerized);
+			this.Controls.Add(this.lblDateComputerized);
+			this.Controls.Add(this.txtPublisher);
+			this.Controls.Add(this.lblPublisher);
+			this.Controls.Add(this.txtNumberOfPages);
+			this.Controls.Add(this.lblNumberOfPages);
 			this.Controls.Add(this.pbxLogo);
 			this.Controls.Add(this.chkHasSeries);
 			this.Controls.Add(this.txtNumberInSeries);
@@ -466,5 +576,13 @@
         private System.Windows.Forms.NumericUpDown txtNumberInSeries;
         private System.Windows.Forms.CheckBox chkHasSeries;
 		private System.Windows.Forms.PictureBox pbxLogo;
+		private System.Windows.Forms.TextBox txtDateComputerized;
+		private System.Windows.Forms.Label lblDateComputerized;
+		private System.Windows.Forms.TextBox txtPublisher;
+		private System.Windows.Forms.Label lblPublisher;
+		private System.Windows.Forms.TextBox txtNumberOfPages;
+		private System.Windows.Forms.Label lblNumberOfPages;
+		private System.Windows.Forms.TextBox txtDatePublished;
+		private System.Windows.Forms.Label lblDatePublished;
 	}
 }

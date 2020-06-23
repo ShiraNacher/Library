@@ -53,19 +53,23 @@
 			// dgvAuthors
 			// 
 			this.dgvAuthors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvAuthors.Location = new System.Drawing.Point(204, 30);
+			this.dgvAuthors.Location = new System.Drawing.Point(195, 30);
 			this.dgvAuthors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.dgvAuthors.MultiSelect = false;
 			this.dgvAuthors.Name = "dgvAuthors";
+			this.dgvAuthors.ReadOnly = true;
+			this.dgvAuthors.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.dgvAuthors.RowHeadersWidth = 51;
 			this.dgvAuthors.RowTemplate.Height = 24;
-			this.dgvAuthors.Size = new System.Drawing.Size(308, 450);
+			this.dgvAuthors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvAuthors.Size = new System.Drawing.Size(471, 450);
 			this.dgvAuthors.TabIndex = 0;
 			// 
 			// btnAdd
 			// 
 			this.btnAdd.BackColor = System.Drawing.Color.White;
 			this.btnAdd.Font = new System.Drawing.Font("Arial", 12F);
-			this.btnAdd.Location = new System.Drawing.Point(85, 186);
+			this.btnAdd.Location = new System.Drawing.Point(73, 186);
 			this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(91, 47);
@@ -78,7 +82,7 @@
 			// 
 			this.btnUpdate.BackColor = System.Drawing.Color.White;
 			this.btnUpdate.Font = new System.Drawing.Font("Arial", 12F);
-			this.btnUpdate.Location = new System.Drawing.Point(85, 250);
+			this.btnUpdate.Location = new System.Drawing.Point(73, 250);
 			this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(91, 47);
@@ -99,7 +103,7 @@
 			this.pnlAddOrUpdate.Controls.Add(this.lblCode);
 			this.pnlAddOrUpdate.Controls.Add(this.lblCodeLable);
 			this.pnlAddOrUpdate.Font = new System.Drawing.Font("Arial", 10.2F);
-			this.pnlAddOrUpdate.Location = new System.Drawing.Point(85, 504);
+			this.pnlAddOrUpdate.Location = new System.Drawing.Point(222, 514);
 			this.pnlAddOrUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.pnlAddOrUpdate.Name = "pnlAddOrUpdate";
 			this.pnlAddOrUpdate.Size = new System.Drawing.Size(427, 154);
@@ -178,7 +182,7 @@
 			// 
 			this.btnDelete.BackColor = System.Drawing.Color.White;
 			this.btnDelete.Font = new System.Drawing.Font("Arial", 12F);
-			this.btnDelete.Location = new System.Drawing.Point(85, 313);
+			this.btnDelete.Location = new System.Drawing.Point(73, 313);
 			this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(91, 47);
@@ -209,7 +213,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Library.Properties.Resources.gradiant___white_blue_purple_4;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(540, 679);
+			this.ClientSize = new System.Drawing.Size(703, 679);
 			this.Controls.Add(this.pbxLogo);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.pnlAddOrUpdate);

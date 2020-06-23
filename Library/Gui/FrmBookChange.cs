@@ -15,6 +15,7 @@ namespace Library.Gui
         string state;
         Bll.ClsBooks b;
         Bll.ClsBooksTable bt;
+        Bll.ClsBookNames bn;
         public FrmBookChange()
         {
             InitializeComponent();
@@ -29,28 +30,27 @@ namespace Library.Gui
             InitializeComponent();
             state = s;
             b = book;
-            //    Bll.Support.FillComboBox
             Bll.Support.FillComboBox(txtAudience, new Bll.ClsAudienceTable().GetDataTable(), "AudienceName", "AudienceCode");
-
+            FillFormFields();
         }
-        public void FillFormField()
+        public void FillFormFields()
         {
             lblCode.Text = b.BookCode.ToString();
             txtBookName.Text = b.BookName.ToString();
             txtAuthorName.Text = b.AuthorCode.ToString();
-            txtBookType.Text = b.BookTypeCode.ToString();
+            txtBookType.Text = b.BookType.ToString();
             txtAudience.Text = b.AudienceCode.ToString();
             txtDescription.Text = b.Description.ToString();
             txtLanguage.Text = b.Language.ToString();
             txtOriginalLanguage.Text = b.OriginalLanguage.ToString();
-            //txtNumberOfPages.Text = b.
+            //?//txtNumberOfPages.Text = bn.NumberOfPages.ToString();
             txtStickerName.Text = b.StickerName.ToString();
-            txtStickerType.Text = b.StickerType.ToString();
+            //?//txtStickerType.Text = b.StickerType.ToString();
             chkHasSeries.Checked = b.HasSeries;
             txtNumberInSeries.Text = b.NumberInSeries.ToString();
             //txtAvailability.Text = b.
-            //txtPublisher.Text = b.
-            //txtDatePublished.Text = b.
+            //?//txtPublisher.Text = bn.Publisher.ToString();
+            //?//txtDateComputerized.Text = bn.DateComputerized.ToString();
             txtStatus.Text = b.Status.ToString();
             //fiil the rest of the things in the book class
         }
@@ -165,6 +165,7 @@ namespace Library.Gui
                 if (state == "add")
 
                 {
+                    b.Availability = true;
                     try
                     {
                         b.Add();
@@ -183,7 +184,7 @@ namespace Library.Gui
                     try
                     {
                         b.Update();
-                        MessageBox.Show("!!");
+                        MessageBox.Show("!העדכון בוצע בהצלחה");
                     }
                     catch (Exception)
                     {
@@ -198,5 +199,18 @@ namespace Library.Gui
 
         }
 
-    }
+		private void chkHasSeries_CheckedChanged(object sender, EventArgs e)
+		{
+            if(chkHasSeries.Checked)
+			{
+                lblNumberInSeries.Visible = true;
+                txtNumberInSeries.Visible = true;
+            }
+            else
+			{
+                lblNumberInSeries.Visible = false;
+                txtNumberInSeries.Visible = false;
+            }
+		}
+	}
 }

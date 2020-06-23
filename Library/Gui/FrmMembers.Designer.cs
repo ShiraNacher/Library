@@ -33,9 +33,9 @@
 			this.btnUpdate = new System.Windows.Forms.Button();
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.dgvMembers = new System.Windows.Forms.DataGridView();
-			this.btnOk = new System.Windows.Forms.Button();
 			this.pbxLogo = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.btnRenewMember = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
 			this.SuspendLayout();
@@ -44,29 +44,31 @@
 			// 
 			this.btnDelete.BackColor = System.Drawing.Color.White;
 			this.btnDelete.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDelete.Location = new System.Drawing.Point(194, 486);
+			this.btnDelete.Location = new System.Drawing.Point(144, 486);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(113, 49);
 			this.btnDelete.TabIndex = 7;
 			this.btnDelete.Text = "מחיקה";
 			this.btnDelete.UseVisualStyleBackColor = false;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// btnUpdate
 			// 
 			this.btnUpdate.BackColor = System.Drawing.Color.White;
 			this.btnUpdate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnUpdate.Location = new System.Drawing.Point(355, 486);
+			this.btnUpdate.Location = new System.Drawing.Point(424, 486);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(113, 49);
 			this.btnUpdate.TabIndex = 6;
 			this.btnUpdate.Text = "עדכון";
 			this.btnUpdate.UseVisualStyleBackColor = false;
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
 			// btnAdd
 			// 
 			this.btnAdd.BackColor = System.Drawing.Color.White;
 			this.btnAdd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAdd.Location = new System.Drawing.Point(519, 486);
+			this.btnAdd.Location = new System.Drawing.Point(564, 486);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(113, 49);
 			this.btnAdd.TabIndex = 5;
@@ -87,17 +89,6 @@
 			this.dgvMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvMembers.Size = new System.Drawing.Size(740, 319);
 			this.dgvMembers.TabIndex = 4;
-			// 
-			// btnOk
-			// 
-			this.btnOk.BackColor = System.Drawing.Color.White;
-			this.btnOk.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnOk.Location = new System.Drawing.Point(37, 486);
-			this.btnOk.Name = "btnOk";
-			this.btnOk.Size = new System.Drawing.Size(77, 49);
-			this.btnOk.TabIndex = 8;
-			this.btnOk.Text = "אישור";
-			this.btnOk.UseVisualStyleBackColor = false;
 			// 
 			// pbxLogo
 			// 
@@ -123,6 +114,18 @@
 			this.label1.TabIndex = 12;
 			this.label1.Text = ":טבלת מנויים";
 			// 
+			// btnRenewMember
+			// 
+			this.btnRenewMember.BackColor = System.Drawing.Color.White;
+			this.btnRenewMember.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRenewMember.Location = new System.Drawing.Point(284, 486);
+			this.btnRenewMember.Name = "btnRenewMember";
+			this.btnRenewMember.Size = new System.Drawing.Size(113, 49);
+			this.btnRenewMember.TabIndex = 13;
+			this.btnRenewMember.Text = "חידוש מנוי";
+			this.btnRenewMember.UseVisualStyleBackColor = false;
+			this.btnRenewMember.Click += new System.EventHandler(this.btnRenewMember_Click);
+			// 
 			// FrmMembers
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -130,9 +133,9 @@
 			this.BackgroundImage = global::Library.Properties.Resources.gradiant___white_blue_purple_4;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 559);
+			this.Controls.Add(this.btnRenewMember);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pbxLogo);
-			this.Controls.Add(this.btnOk);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.btnUpdate);
 			this.Controls.Add(this.btnAdd);
@@ -152,8 +155,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvMembers;
-		private System.Windows.Forms.Button btnOk;
 		private System.Windows.Forms.PictureBox pbxLogo;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnRenewMember;
 	}
 }
